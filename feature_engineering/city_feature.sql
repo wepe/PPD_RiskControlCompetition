@@ -1,0 +1,67 @@
+CREATE TABLE city(Idx INT ,UserInfo_2 VARCHAR(50) ,UserInfo_4 VARCHAR(50) ,UserInfo_7 VARCHAR(50) ,UserInfo_8 VARCHAR(50) ,UserInfo_19 VARCHAR(50) ,UserInfo_20 VARCHAR(50));
+
+LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\city9w.csv'
+ IGNORE INTO TABLE city
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+ SELECT UserInfo_8 AS city,(COUNT(1))AS num FROM city GROUP BY UserInfo_8
+ 
+ UPDATE  city SET UserInfo_8=REPLACE(UserInfo_8,'市','')
+
+CREATE TABLE ui2_discrete(UserInfo_2 VARCHAR(20),ui2_num DOUBLE,ui2_0 DOUBLE,ui2_1 DOUBLE,ui2_2 DOUBLE,ui2_3 DOUBLE,ui2_4 DOUBLE);
+LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\ui2_discrete.csv'
+ IGNORE INTO TABLE ui2_discrete
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+ CREATE TABLE ui4_discrete(UserInfo_4 VARCHAR(20),ui4_num DOUBLE,ui4_0 DOUBLE,ui4_1 DOUBLE,ui4_2 DOUBLE,ui4_3 DOUBLE,ui4_4 DOUBLE,ui4_5 DOUBLE);
+ LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\ui4_discrete.csv'
+ IGNORE INTO TABLE ui4_discrete
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+CREATE TABLE  ui7_discrete(UserInfo_7 VARCHAR(20),p_log DOUBLE,p_0 DOUBLE,p_1 DOUBLE ,p_2 DOUBLE,p_3 DOUBLE,p_4 DOUBLE,p_5 DOUBLE,p_6 DOUBLE,p_7 DOUBLE,p_8 DOUBLE,p_9 DOUBLE);
+ LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\ui7_discrete.csv'
+ IGNORE INTO TABLE ui7_discrete
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+CREATE TABLE  ui8_discrete(UserInfo_8 VARCHAR(50),ui8_num DOUBLE,ui8_0 DOUBLE,ui8_1 DOUBLE,ui8_2 DOUBLE,ui8_3 DOUBLE,ui8_4 DOUBLE,ui8_5 DOUBLE,ui8_6 DOUBLE);
+ LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\ui8_discrete.csv'
+ IGNORE INTO TABLE ui8_discrete
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+ CREATE TABLE ui19_discrete(UserInfo_19 VARCHAR(50),ui19_num DOUBLE,ui19_0 DOUBLE,ui19_1 DOUBLE,ui19_2 DOUBLE,ui19_3 DOUBLE,ui19_4 DOUBLE,ui19_5 DOUBLE);
+  LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\ui19_discrete.csv'
+ IGNORE INTO TABLE ui19_discrete
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+ CREATE TABLE  ui20_discrete(UserInfo_20 VARCHAR(50),ui20_num DOUBLE,ui20_0 DOUBLE,ui20_1 DOUBLE,ui20_2 DOUBLE,ui20_3 DOUBLE,ui20_4 DOUBLE,ui20_5 DOUBLE,ui20_6 DOUBLE,ui20_7 DOUBLE);
+   LOAD DATA LOCAL INFILE
+ 'D:\\temp/city\\ui20_discrete.csv'
+ IGNORE INTO TABLE ui20_discrete
+ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
+ LINES TERMINATED BY '\r\n';
+ 
+ SELECT Idx,b.*,c.*,d.*,e.*,f.*,g.*
+ FROM city a
+ LEFT OUTER JOIN ui2_discrete b ON(a.`UserInfo_2`=b.`UserInfo_2`)
+ LEFT OUTER JOIN ui4_discrete c ON(a.`UserInfo_4`=c.`UserInfo_4`)
+ LEFT OUTER JOIN ui7_discrete d ON(a.`UserInfo_7`=d.`UserInfo_7`)
+ LEFT OUTER JOIN ui8_discrete e ON(a.`UserInfo_8`=e.`UserInfo_8`)
+ LEFT OUTER JOIN ui19_discrete f ON(a.`UserInfo_19`=f.`UserInfo_19`)
+ LEFT OUTER JOIN ui20_discrete g ON(a.`UserInfo_20`=g.`UserInfo_20`)
+ LIMIT 100000
+ 
+ 
+ 
+ 
