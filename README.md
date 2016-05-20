@@ -8,7 +8,7 @@
 
 	不得仰视本王
 
-	队员: [天音](https://tianchi.shuju.aliyun.com/science/scientistDetail.htm?spm=5176.100065.0.0.gnyTyY&userId=713068774)，[Bryan](http://blog.csdn.net/bryan__)，[Cyber](https://tianchi.shuju.aliyun.com/science/scientistDetail.htm?spm=0.0.0.0.hITk7I&userId=728128096)，[赵蕊](https://tianchi.shuju.aliyun.com/science/scientistDetail.htm?spm=5176.100170.111.28.PytD5w&userId=312633256)，[wepon](http://2hwp.com/)
+	队员: [天音](https://tianchi.shuju.aliyun.com/science/scientistDetail.htm?spm=5176.100065.0.0.gnyTyY&userId=713068774)，[Cyber](https://tianchi.shuju.aliyun.com/science/scientistDetail.htm?spm=0.0.0.0.hITk7I&userId=728128096)，[Bryan](http://blog.csdn.net/bryan__)，[赵蕊](https://tianchi.shuju.aliyun.com/science/scientistDetail.htm?spm=5176.100170.111.28.PytD5w&userId=312633256)，[wepon](http://2hwp.com/)
 
 - 解决方案
 
