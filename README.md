@@ -1,4 +1,4 @@
-###[拍拍贷风险控制大赛铜奖解决方案](https://github.com/wepe/PPD_RiskControlCompetition)
+### [拍拍贷风险控制大赛铜奖解决方案](https://github.com/wepe/PPD_RiskControlCompetition)
 
 - 赛题介绍
 
